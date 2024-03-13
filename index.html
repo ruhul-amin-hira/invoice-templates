@@ -93,7 +93,7 @@
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
       }
-      #table thead td:nth-child(4) {
+      #table thead td:nth-child(5) {
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
       }
@@ -126,6 +126,8 @@
         text-align: left;
       }
       #tbody td:nth-child(4) {
+        padding-left: 10px;
+        padding-right: 10px;
       }
       .terms-subtotal-section {
         width: 100%;
@@ -516,6 +518,7 @@
                 <td>Item Description</td>
                 <td>Quantity</td>
                 <td>Unit Price</td>
+                <td>Tax</td>
                 <td>Total</td>
               </tr>
             </thead>
@@ -524,12 +527,14 @@
                 <td>Item Name</td>
                 <td>1</td>
                 <td>$000.00</td>
+                <td>$200 (2%)</td>
                 <td>$000.00</td>
               </tr>
               <tr>
                 <td>Item Name</td>
                 <td>1</td>
                 <td>$000.00</td>
+                <td>$200 (2%)</td>
                 <td>$000.00</td>
               </tr>
             </tbody>
@@ -551,7 +556,8 @@
                 </td>
               </tr>
               <tr>
-                <td>Tax( <span id="tax_percentage">10</span>%):</td>
+                <!-- <td>Tax( <span id="tax_percentage">10</span>%):</td> -->
+                <td>Tax:</td>
                 <td id="total_tax" style="text-align: center">$000</td>
               </tr>
               <tr>
