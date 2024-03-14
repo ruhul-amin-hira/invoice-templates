@@ -48,6 +48,8 @@ $color3: #1f80b54d;
 }
 #signature img {
     height: 30px;
+    display: block;
+    margin: 0 auto;
   }
 
 .invoice {
@@ -265,8 +267,14 @@ $color3: #1f80b54d;
     float: left;
   }
   &__signature{
-    width: 25%;
+    width: 22%;
     float: right;
+    text-align: right;
+    &-border{
+      display: block;
+      border-bottom: 1px solid $color1;
+      margin: 5px 0 5px;
+    }
   }
   &__credit{
     display: block;

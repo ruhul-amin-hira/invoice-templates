@@ -28,7 +28,9 @@ body {
   height: 45px; }
 
 #signature img {
-  height: 30px; }
+  height: 30px;
+  display: block;
+  margin: 0 auto; }
 
 .invoice {
   font-family: "Inter", sans-serif; }
@@ -227,8 +229,13 @@ body {
     padding-right: 30px;
     float: left; }
   .invoice__signature {
-    width: 25%;
-    float: right; }
+    width: 22%;
+    float: right;
+    text-align: right; }
+    .invoice__signature-border {
+      display: block;
+      border-bottom: 1px solid #000000;
+      margin: 5px 0 5px; }
   .invoice__credit {
     display: block;
     width: 100%;
