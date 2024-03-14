@@ -1,0 +1,218 @@
+p,
+h1,
+h2 {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.clear__both::after, .invoice__upper::after, .invoice__about::after, .invoice__about-inner::after, .invoice__total::after, .clear__both::before, .invoice__upper::before, .invoice__about::before, .invoice__about-inner::before, .invoice__total::before {
+  display: table;
+  content: "";
+  clear: both; }
+
+.paid_mark_show {
+  position: absolute;
+  top: 50%;
+  left: 20%; }
+
+.paid_mark_hide {
+  display: none; }
+
+#logo img {
+  height: 45px; }
+
+.invoice {
+  font-family: "Inter", sans-serif; }
+  .invoice__container {
+    width: 595px;
+    min-height: 792px;
+    background-color: white;
+    box-shadow: 0px 10px 20px 0px #25314c26;
+    position: relative;
+    display: block;
+    margin: auto; }
+  .invoice__upper {
+    padding: 25px 25px 30px; }
+    .invoice__upper-left {
+      width: 50%;
+      float: left; }
+    .invoice__upper-logo {
+      padding-bottom: 20px; }
+    .invoice__upper-header {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 800;
+      line-height: 44px;
+      font-size: 44px;
+      color: #1f80b5;
+      text-transform: uppercase; }
+    .invoice__upper-right {
+      width: 50%;
+      float: right; }
+      .invoice__upper-right-inner {
+        width: 70%;
+        margin-left: auto; }
+    .invoice__upper-to {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      color: #396282;
+      padding-bottom: 3px; }
+    .invoice__upper-name {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 700;
+      color: #000000;
+      padding-bottom: 2px; }
+    .invoice__upper-p {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px; }
+  .invoice__about-img {
+    width: 100%;
+    display: block; }
+    .invoice__about-img img {
+      height: 100%; }
+  .invoice__about-inner {
+    padding: 15px 0 15px 110px;
+    margin-top: -4px;
+    background-color: #1f80b533; }
+  .invoice__about-box {
+    width: 30%;
+    float: left;
+    margin-left: auto; }
+  .invoice__about-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #000000; }
+  .invoice__about-no {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #1f80b5; }
+  .invoice__about-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 400; }
+  .invoice__table {
+    padding: 13px 20px; }
+    .invoice__table table {
+      width: 100%; }
+    .invoice__table-head tr {
+      background-color: #1f80b5; }
+    .invoice__table-head td {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      font-size: 12px;
+      color: white;
+      padding: 10px 20px; }
+      .invoice__table-head td:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 165px; }
+      .invoice__table-head td:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px; }
+    .invoice__table-body tr:nth-child(even) {
+      background-color: #1f80b51a; }
+    .invoice__table-body td {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      line-height: 14px;
+      padding: 10px 20px; }
+      .invoice__table-body td:not(:first-child) {
+        text-align: center;
+        padding: 10px; }
+  .invoice__total {
+    padding: 15px 20px;
+    background-color: #1f80b533; }
+  .invoice__condition {
+    box-sizing: border-box;
+    width: 65%;
+    float: left;
+    padding-right: 30px; }
+    .invoice__condition .terms-section {
+      margin-top: 15%; }
+    .invoice__condition h1 {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 700;
+      line-height: 12px;
+      color: #1f80b5; }
+    .invoice__condition p {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      color: #000000; }
+  .invoice__calculation {
+    width: 35%;
+    float: right; }
+    .invoice__calculation table {
+      width: 100%; }
+    .invoice__calculation td {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 600;
+      line-height: 10px;
+      color: #000000;
+      padding: 4px 15px; }
+    .invoice__calculation-tr {
+      background: #1f80b54d; }
+      .invoice__calculation-tr td {
+        padding: 10px 15px;
+        color: #065c8b; }
+        .invoice__calculation-tr td:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px; }
+        .invoice__calculation-tr td:last-child {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px; }
+  .invoice__pay-btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 700;
+    line-height: 10px;
+    color: white;
+    text-transform: uppercase;
+    padding: 7px 0;
+    background: #1f80b5;
+    width: 100%;
+    display: block !important;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 8px; }
+    .invoice__pay-btn a {
+      color: white; }
