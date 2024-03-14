@@ -241,7 +241,9 @@ body {
       font-weight: 600;
       line-height: 14px;
       margin: 0 auto; }
+    .invoice__credit-logo {
+      display: inline-block; }
     .invoice__credit img {
-      display: inline-block;
+      display: block;
       width: 14px;
       height: 13px; }

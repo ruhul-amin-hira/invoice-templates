@@ -280,8 +280,11 @@ $color3: #1f80b54d;
         line-height: 14px;
         margin: 0 auto;
     }
+    &-logo{
+      display: inline-block;
+    }
     & img{
-        display: inline-block;
+        display: block;
         width: 14px;
         height: 13px;
     }
