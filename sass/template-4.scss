@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.clear__both {
+  &::after,
+  &::before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+.paid_mark_show {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.paid_mark_hide {
+  display: none;
+}
+#logo img {
+  height: 45px;
+  margin-left: auto;
+  display: block;
+}
+#signature img {
+  height: 30px;
+  display: block;
+  margin-right: auto;
+}
+
+$color1: #111118;
+
+@mixin fontStyle {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.invoice {
+  font-family: "Inter", sans-serif;
+  width: 595px;
+  min-height: 792px;
+  margin: auto;
+  &__container {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 10px 20px 0px #25314c26;
+    position: relative;
+    display: block;
+    padding: 30px 30px 20px;
+  }
+  &__upper {
+    & table {
+      width: 100%;
+    }
+    &-header {
+      font-size: 32px;
+      line-height: 38px;
+      font-weight: bold;
+    }
+    &-no {
+      font-size: 12px;
+      line-height: 16px;
+      color: #220000;
+      font-weight: 700;
+      padding: 2px 0;
+      & span {
+        @include fontStyle();
+      }
+    }
+
+    &-text {
+      padding: 2px 0;
+      @include fontStyle();
+      font-weight: 700;
+      color: $color1;
+      & span {
+        @include fontStyle();
+      }
+    }
+
+    &-right {
+      vertical-align: baseline;
+    }
+  }
+  &__address {
+    padding: 30px 0;
+    & table {
+      width: 100%;
+    }
+    &-header {
+      text-transform: uppercase;
+      @include fontStyle();
+    }
+    &-name {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+      padding: 1px 0;
+    }
+    &-p {
+      @include fontStyle();
+      padding: 1px 0;
+    }
+    &-left {
+      padding-right: 20px;
+    }
+    &-right {
+      padding-left: 20px;
+      text-align: right;
+    }
+  }
+  &__table {
+    padding-bottom: 30px;
+    & table {
+      width: 100%;
+    }
+    &-head {
+      & td {
+        @include fontStyle();
+        font-weight: 500;
+        padding: 5px 10px;
+        border-bottom: 1px solid $color1;
+
+        &:first-child {
+          width: 175px;
+          padding: 0;
+        }
+        &:not(:first-child) {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: right;
+          padding: 0;
+        }
+      }
+    }
+    &-body {
+      & td {
+        @include fontStyle();
+        padding: 7px 10px;
+      }
+      & tr {
+        & td {
+          &:first-child {
+            padding-left: 0;
+          }
+          &:not(:first-child) {
+            text-align: center;
+          }
+          &:last-child {
+            text-align: right;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  &__additional {
+    @extend .clear__both;
+    padding-bottom: 8px;
+    &-header {
+      @include fontStyle();
+      font-weight: 700;
+    }
+
+    &-left {
+      float: left;
+    }
+    &-right {
+      float: right;
+    }
+  }
+  &__total {
+    padding: 5px 0 5px;
+    @extend .clear__both;
+    border-top: 1px solid #11111866;
+    border-bottom: 1px solid #11111866 ;
+  }
+  &__condition {
+    box-sizing: border-box;
+    width: 55%;
+    float: left;
+    padding-right: 30px;
+   
+    & .terms-section {
+      margin-top: 5px;
+    }
+    & h1 {
+      @include fontStyle();
+      font-weight: 700;
+      line-height: 12px;
+      color: $color1;
+    }
+    & p {
+      @include fontStyle();
+      color: $color1;
+    }
+  }
+  &__calculation {
+    width: 45%;
+    float: right;
+    & table {
+      width: 100%;
+    }
+    & td {
+      @include fontStyle();
+      font-weight: 500;
+      line-height: 10px;
+      color: $color1;
+      padding: 4px 15px;
+    }
+    &-tr {
+      & td {
+        color: $color1;
+
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          font-weight: 700;
+        }
+        &:last-child {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+  }
+  &__last-sec{
+    @extend .clear__both;
+    padding: 15px 0;
+  }
+  &__signature{
+    width: 55%;
+    float: left;
+  }
+  &__pay-btn{
+    float: right;
+    width: 45%;
+    text-align: center;
+    & a{
+        @include fontStyle();
+        font-weight:700;
+        text-transform: uppercase;
+        color: white;
+        padding: 7px 10px;
+        background: #284B63;
+        width: 100%;
+        display: block;
+
+    }
+  }
+  &__credit{
+    display: block;
+    width: 100%;
+    @extend .clear__both;
+    text-align: center;
+    background: #053858;
+    padding: 15px;
+
+    & h2 {
+        @include fontStyle();
+        font-weight: 500;
+        line-height: 14px;
+        margin: 0 auto;
+        color: white;
+    }
+    &-logo{
+      display: inline-block;
+    }
+    & img{
+        display: block;
+        width: 14px;
+        height: 13px;
+    }
+  }
+}
