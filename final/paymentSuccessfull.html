@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      p,
+      h1,
+      h2 {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .clear-both::after,
+      .payment__row::after,
+      .clear-both::before,
+      .payment__row::before {
+        display: table;
+        content: "";
+        clear: both;
+      }
+
+      .payment {
+        width: 422px;
+        height: 535px;
+      }
+      .payment__container {
+        border-radius: 10px;
+        border: 1px solid #5235e833;
+        background: #5235e80d;
+        padding: 10px 20px;
+      }
+      .payment__upper {
+        padding: 25px 0 20px;
+        text-align: center;
+        border-bottom: 1px dashed #5235e8;
+      }
+      .payment__sucess-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #23a26d1f;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      .payment__sucess-icon img {
+        display: block;
+        max-width: 100%;
+        margin: auto auto;
+        padding-top: 12px;
+      }
+      .payment__sucess-header {
+        color: #454056;
+        font-family: "Satoshi", "Courier New", Courier, monospace;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+      .payment__lower {
+        padding: 20px 0;
+      }
+      .payment__row {
+        padding-bottom: 9px;
+      }
+      .payment__row-last {
+        padding: 15px 0;
+        border-bottom: 1px solid #5235e833;
+      }
+      .payment__row-amount {
+        color: #454056;
+        font-family: "Satoshi", "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 50%;
+        float: right;
+        text-align: right;
+      }
+      .payment__title,
+      .payment__item {
+        font-family: "Satoshi", "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #3f415a;
+        width: 50%;
+        float: left;
+      }
+      .payment__item {
+        line-height: 20px;
+        width: 50%;
+        float: right;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="payment">
+      <div class="payment__container">
+        <div class="payment__upper">
+          <div class="payment__sucess-icon">
+            <img
+              src="https://i.ibb.co/1X8YzVP/tick-circle.png"
+              alt="sucess icon"
+            />
+          </div>
+          <h1 class="payment__sucess-header">Payment Successful!</h1>
+        </div>
+        <div class="payment__lower">
+          <div class="payment__row">
+            <p class="payment__title">Invoice ID</p>
+            <p class="payment__item">0000442257</p>
+          </div>
+          <div class="payment__row">
+            <p class="payment__title">Transaction Number</p>
+            <p class="payment__item">AGSHS45555</p>
+          </div>
+          <div class="payment__row">
+            <p class="payment__title">Date</p>
+            <p class="payment__item">Mar 12, 2024</p>
+          </div>
+          <div class="payment__row">
+            <p class="payment__title">Time</p>
+            <p class="payment__item">04:10 PM</p>
+          </div>
+          <div class="payment__row">
+            <p class="payment__title">Payment Method</p>
+            <p class="payment__item">Credit Card</p>
+          </div>
+          <div class="payment__row payment__row-last">
+            <p class="payment__title">Amount</p>
+            <p class="payment__row-amount">$4000.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+p,
+h1,
+h2 {
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+.clear-both{
+    &::after,
+    &::before{
+        display: table;
+        content: "";
+        clear: both;
+    }
+}
+
+.payment {
+  width: 422px;
+  height: 535px;
+  &__container {
+    border-radius: 10px;
+    border: 1px solid #5235e833;
+    background: #5235e80d;
+    padding: 10px 20px;
+  }
+  &__upper {
+    padding: 25px 0 20px;
+    text-align: center;
+    border-bottom: 1px dashed #5235e8;
+  }
+  &__sucess {
+    &-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #23a26d1f;
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
+      & img {
+        display: block;
+        max-width: 100%;
+        margin: auto auto;
+        padding-top: 12px;
+      }
+    }
+
+    &-header {
+      color: #454056;
+      font-family: "Satoshi", "Courier New", Courier, monospace;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+  }
+  &__lower {
+    padding: 20px 0;
+  }
+  &__row {
+    @extend .clear-both;
+    padding-bottom: 9px;
+    &-last{
+        padding: 15px 0;
+        border-bottom: 1px solid #5235E833;
+    }
+    &-amount {
+      color: #454056;
+      font-family: "Satoshi", "Courier New", Courier, monospace;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      width: 50%;
+      float: right;
+      text-align: right;
+    }
+  }
+  &__title {
+    font-family: "Satoshi", "Courier New", Courier, monospace;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #3f415a;
+    width: 50%;
+    float: left;
+  }
+  &__item {
+    @extend .payment__title;
+    line-height: 20px;
+    width: 50%;
+    float: right;
+    text-align: right;
+  }
+}
