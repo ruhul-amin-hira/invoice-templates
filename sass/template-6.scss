@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.clear__both {
+  &::after,
+  &::before {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+.paid_mark_show {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.paid_mark_hide {
+  display: none;
+}
+#logo img {
+  height: 45px;
+  display: block;
+}
+#signature img {
+  height: 30px;
+  display: block;
+  margin-right: auto;
+}
+
+@mixin fontStyle {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.invoice {
+  font-family: "Inter", sans-serif;
+  &__container {
+    background: #26303c;
+    box-shadow: 0px 10px 20px 0px #25314c26;
+    position: relative;
+    display: block;
+    padding: 30px 30px 20px;
+    width: 595px;
+    min-height: 792px;
+    margin: auto;
+  }
+  &__top {
+    & table {
+      width: 100%;
+    }
+    & h1 {
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 16px;
+      color: white;
+      text-transform: uppercase;
+      text-align: right;
+      position: relative;
+    }
+  }
+  &__details {
+    padding: 10px 0;
+    & table {
+      width: 100%;
+    }
+    &-text{
+        @include fontStyle();
+        color: white;
+        text-transform: uppercase;
+        padding: 4px;
+        
+        & span {
+            text-transform: none;
+        }
+    }
+    &-right{
+        width: 80%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #396282;
+        margin-left: auto;
+    }
+  }
+  &__address{
+    color: white;
+    padding: 15px;
+    &-header{
+        @include fontStyle();
+        font-weight: 700;
+        padding: 1px 0;
+    }
+    &-name{
+        @include fontStyle();
+        font-weight: 700;
+        padding: 1px 0;
+    }
+    &-p{
+        @include fontStyle();
+        font-weight: 400;
+        padding: 1px 0;
+    }
+  }
+  &__table {
+    padding-bottom: 5px;
+    color: white;
+    & table {
+      width: 100%;
+    }
+    &-head {
+      & td {
+        @include fontStyle();
+        font-weight: 500;
+        padding: 10px 20px;
+        border-bottom: 8px solid #08183C;
+        background: #003047;
+
+        &:first-child {
+          width: 175px;
+        }
+        &:not(:first-child) {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+    &-body {
+      & td {
+        @include fontStyle();
+        padding: 10px 15px;
+        background: #2F425166;
+      }
+      & tr {
+        & td {
+          &:not(:first-child) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  &__total{
+    @extend .clear__both;
+    color: white;
+    &-left{
+        width: 55%;
+        float: left;
+        padding-top: 20px;
+    }
+    &-right{
+        width: 45%;
+        float: right;
+        & table {
+            width: 100%;
+          }
+          & td {
+            @include fontStyle();
+            font-weight: 500;
+            line-height: 10px;
+            padding: 8px 15px;
+            background: #182844;
+            border-bottom: 2px solid #08183C;
+          }
+          &-tr {
+            & td {
+              &:first-child {
+                font-weight: 700;
+             background: #2F4251;
+              }
+              &:last-child {
+                background: #2F4251;
+              }
+            }
+          }
+    }
+  }
+  &__condition {
+    & .terms-section {
+      margin-top: 5px;
+    }
+    & h1 {
+      @include fontStyle();
+      font-weight: 700;
+      line-height: 12px;
+    }
+    & p {
+      @include fontStyle();
+    }
+  }
+  &__signature{
+    margin-top: 80px;
+  }
+  &__pay-btn{
+    text-align: center;
+    & a{
+        @include fontStyle();
+        font-weight:700;
+        text-transform: uppercase;
+        color: white;
+        padding: 7px 10px;
+        background: #003047;
+        width: 100%;
+        display: block;
+    }
+  }
+  &__footer{
+    color: white;
+    background: #003047;
+    border-radius: 7px;
+    margin-top:30px;
+    & table{
+        width: 100%;
+        & td{
+            padding: 5px 20px;
+            vertical-align: middle;
+            &:nth-child(1){
+                width: 30%;
+            }
+            &:nth-child(2){
+                width: 30%
+            }
+            &:nth-child(3){
+                width: 40%
+            }
+        }
+    }
+    &-add-1{
+        & h1{
+            @include fontStyle();
+            font-size: 8px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+
+    &-add-icon{
+        width: 20px;
+        height: 18px;
+        float: left;
+        margin-right: 4px;
+        border-radius: 4px;
+        & img{
+            display: block;
+            width: 12px;
+            height: 10px;
+            margin: auto;
+            margin-top: 4px;
+        }
+       
+    }
+    &-add-position{
+        & p {
+            @include fontStyle();
+            font-size: 8px;
+        }
+    }
+  }
+  &__credit{
+    display: block;
+    width: 100%;
+    @extend .clear__both;
+    text-align: center;
+    padding: 15px;
+
+    & h2 {
+        @include fontStyle();
+        line-height: 14px;
+        margin: 0 auto;
+        color: white;
+    }
+    &-logo{
+      display: inline-block;
+    }
+    & img{
+        display: block;
+        width: 14px;
+        height: 13px;
+    }
+  }
+}
