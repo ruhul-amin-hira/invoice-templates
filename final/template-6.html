@@ -60,7 +60,7 @@
         font-family: "Inter", sans-serif;
       }
       .invoice__container {
-        background: #08183c;
+        background: #26303c;
         box-shadow: 0px 10px 20px 0px #25314c26;
         position: relative;
         display: block;
@@ -81,49 +81,57 @@
         text-align: right;
         position: relative;
       }
-      .invoice__upper {
-        border: 1px solid #003047;
-        border-radius: 6px;
-        margin-top: 35px;
+      .invoice__details {
+        padding: 10px 0;
       }
-      .invoice__upper table {
+      .invoice__details table {
         width: 100%;
       }
-      .invoice__upper-text {
+      .invoice__details-text {
         font-size: 10px;
         line-height: 16px;
         font-weight: 500;
         color: white;
         text-transform: uppercase;
-        padding: 10px 20px;
+        padding: 4px;
       }
-      .invoice__upper-text span {
+      .invoice__details-text span {
         text-transform: none;
+      }
+      .invoice__details-right {
+        width: 80%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #396282;
+        margin-left: auto;
       }
       .invoice__address {
         color: white;
-        padding: 15px 0 10px;
+        padding: 15px;
       }
       .invoice__address-header {
         font-size: 10px;
         line-height: 16px;
         font-weight: 500;
         font-weight: 700;
+        padding: 1px 0;
       }
       .invoice__address-name {
         font-size: 10px;
         line-height: 16px;
         font-weight: 500;
         font-weight: 700;
+        padding: 1px 0;
       }
       .invoice__address-p {
         font-size: 10px;
         line-height: 16px;
         font-weight: 500;
         font-weight: 400;
+        padding: 1px 0;
       }
       .invoice__table {
-        padding-bottom: 5px;
+        padding-bottom: 8px;
         color: white;
       }
       .invoice__table table {
@@ -134,18 +142,28 @@
         line-height: 16px;
         font-weight: 500;
         font-weight: 500;
-        padding: 10px 20px;
-        border-bottom: 8px solid #08183c;
-        background: #003047;
+        padding: 12px 20px;
+        background: #396282;
+        font-size: 12px;
       }
       .invoice__table-head td:first-child {
         width: 175px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
       }
       .invoice__table-head td:not(:first-child) {
         text-align: center;
       }
       .invoice__table-head td:last-child {
         text-align: center;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+      .invoice__table-body::before {
+        content: "-";
+        display: block;
+        line-height: 10px;
+        color: transparent;
       }
       .invoice__table-body td {
         font-size: 10px;
@@ -172,6 +190,11 @@
       .invoice__total-right table {
         width: 100%;
       }
+      .invoice__total-right table tr:nth-child(4) td,
+      .invoice__total-right table tr:nth-child(5) td,
+      .invoice__total-right table tr:nth-child(6) td {
+        background-color: transparent;
+      }
       .invoice__total-right td {
         font-size: 10px;
         line-height: 16px;
@@ -179,8 +202,8 @@
         font-weight: 500;
         line-height: 10px;
         padding: 8px 15px;
-        background: #182844;
-        border-bottom: 2px solid #08183c;
+        background: #2a3744;
+        border-bottom: 2px solid #26303c;
       }
       .invoice__total-right-tr td:first-child {
         font-weight: 700;
@@ -218,13 +241,13 @@
         text-transform: uppercase;
         color: white;
         padding: 7px 10px;
-        background: #003047;
+        background: #396282;
         width: 100%;
         display: block;
       }
       .invoice__footer {
         color: white;
-        background: #003047;
+        background: #396282;
         border-radius: 7px;
         margin-top: 30px;
       }
@@ -232,7 +255,7 @@
         width: 100%;
       }
       .invoice__footer table td {
-        padding: 5px 20px;
+        padding: 2px 20px 0;
         vertical-align: middle;
       }
       .invoice__footer table td:nth-child(1) {
@@ -317,41 +340,43 @@
             </td>
           </table>
         </div>
-        <div class="invoice__upper">
+        <div class="invoice__details">
           <table>
             <tr>
               <td>
-                <p class="invoice__upper-text">
-                  Invoice no: <span id="invoice_number">KEY_INVOICE_NO</span>
-                </p>
+                <div class="invoice__address">
+                  <p class="invoice__address-header">Invoice to</p>
+                  <p class="invoice__address-name">
+                    <span id="client_name">Company Name</span>
+                  </p>
+                  <p class="invoice__address-p">
+                    <span id="client_phone ">+00 0000 0000</span>
+                  </p>
+                  <p class="invoice__address-p">
+                    <span id="client_email">comapnymail@gmail.com</span>
+                  </p>
+                  <p class="invoice__address-p">
+                    <span id="client_address"
+                      >Company Address, United Kingdom</span
+                    >
+                  </p>
+                </div>
               </td>
               <td>
-                <p class="invoice__upper-text">
-                  Due Date: <span id="invoice_date">INVOICE_DATE</span>
-                </p>
-              </td>
-              <td>
-                <p class="invoice__upper-text">
-                  Date: <span id="due_date">KEY_DUE_DATE</span>
-                </p>
+                <div class="invoice__details-right">
+                  <p class="invoice__details-text">
+                    Invoice no: <span id="invoice_number">KEY_INVOICE_NO</span>
+                  </p>
+                  <p class="invoice__details-text">
+                    Due Date: <span id="invoice_date">INVOICE_DATE</span>
+                  </p>
+                  <p class="invoice__details-text">
+                    Date: <span id="due_date">KEY_DUE_DATE</span>
+                  </p>
+                </div>
               </td>
             </tr>
           </table>
-        </div>
-        <div class="invoice__address">
-          <p class="invoice__address-header">Invoice to</p>
-          <p class="invoice__address-name">
-            <span id="client_name">Company Name</span>
-          </p>
-          <p class="invoice__address-p">
-            <span id="client_phone ">+00 0000 0000</span>
-          </p>
-          <p class="invoice__address-p">
-            <span id="client_email">comapnymail@gmail.com</span>
-          </p>
-          <p class="invoice__address-p">
-            <span id="client_address">Company Address, United Kingdom</span>
-          </p>
         </div>
         <div class="invoice__table">
           <table cellpadding="0" cellspacing="0">

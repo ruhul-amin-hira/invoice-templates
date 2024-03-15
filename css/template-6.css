@@ -100,7 +100,7 @@ body {
       font-weight: 400;
       padding: 1px 0; }
   .invoice__table {
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     color: white; }
     .invoice__table table {
       width: 100%; }
@@ -109,21 +109,30 @@ body {
       line-height: 16px;
       font-weight: 500;
       font-weight: 500;
-      padding: 10px 20px;
-      border-bottom: 8px solid #08183C;
-      background: #003047; }
+      padding: 12px 20px;
+      background: #396282;
+      font-size: 12px; }
       .invoice__table-head td:first-child {
-        width: 175px; }
+        width: 175px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px; }
       .invoice__table-head td:not(:first-child) {
         text-align: center; }
       .invoice__table-head td:last-child {
-        text-align: center; }
+        text-align: center;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px; }
+    .invoice__table-body::before {
+      content: "-";
+      display: block;
+      line-height: 10px;
+      color: transparent; }
     .invoice__table-body td {
       font-size: 10px;
       line-height: 16px;
       font-weight: 500;
       padding: 10px 15px;
-      background: #2F425166; }
+      background: #2f425166; }
     .invoice__table-body tr td:not(:first-child) {
       text-align: center; }
   .invoice__total {
@@ -137,6 +146,8 @@ body {
       float: right; }
       .invoice__total-right table {
         width: 100%; }
+        .invoice__total-right table tr:nth-child(4) td, .invoice__total-right table tr:nth-child(5) td, .invoice__total-right table tr:nth-child(6) td {
+          background-color: transparent; }
       .invoice__total-right td {
         font-size: 10px;
         line-height: 16px;
@@ -144,13 +155,13 @@ body {
         font-weight: 500;
         line-height: 10px;
         padding: 8px 15px;
-        background: #182844;
-        border-bottom: 2px solid #08183C; }
+        background: #2a3744;
+        border-bottom: 2px solid #26303c; }
       .invoice__total-right-tr td:first-child {
         font-weight: 700;
-        background: #2F4251; }
+        background: #2f4251; }
       .invoice__total-right-tr td:last-child {
-        background: #2F4251; }
+        background: #2f4251; }
   .invoice__condition .terms-section {
     margin-top: 5px; }
   .invoice__condition h1 {
@@ -175,18 +186,18 @@ body {
       text-transform: uppercase;
       color: white;
       padding: 7px 10px;
-      background: #003047;
+      background: #396282;
       width: 100%;
       display: block; }
   .invoice__footer {
     color: white;
-    background: #003047;
+    background: #396282;
     border-radius: 7px;
     margin-top: 30px; }
     .invoice__footer table {
       width: 100%; }
       .invoice__footer table td {
-        padding: 5px 20px;
+        padding: 2px 20px 0;
         vertical-align: middle; }
         .invoice__footer table td:nth-child(1) {
           width: 30%; }
